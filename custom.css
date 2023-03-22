@@ -19,11 +19,6 @@ a[href^="https://cdn.discordapp.com/emojis/"] {
     display: none;
 }
 
-/* shiggycord */
-* {
-    background-image: url('https://media.discordapp.net/stickers/1039992459209490513.png');
-}
-
 /* Fix Small Image Group Previews (>=32px) */
 .lazyImg-ewiNCh,
 .originalLink-Azwuo9 {
