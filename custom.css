@@ -1,6 +1,11 @@
 @import url('https://d3sox.github.io/complementary-discord-theme/hide-nitro-upselling.theme.css');
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/bearableInbox.css);
 
+/* shiggycord */
+* {
+    background-image: url('https://media.discordapp.net/stickers/1039992459209490513.png');
+}
+
 /* Fix Small Image Group Previews (>=32px) */
 .lazyImg-ewiNCh,
 .originalLink-Azwuo9 {
