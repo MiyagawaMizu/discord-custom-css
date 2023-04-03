@@ -1,14 +1,19 @@
 @import url('https://captain8771.github.io/discordstyles/betterBuiltinEmojis.css');
-@import url("https://raw.githubusercontent.com/snappycreeper/OldDiscordFont/main/OldDiscordFont.theme.css");
+/* @import url("https://raw.githubusercontent.com/snappycreeper/OldDiscordFont/main/OldDiscordFont.theme.css"); */
 @import url("https://maendisease.github.io/BetterDiscordStuff/css/bearableInbox.css");
 
 /* discord button */
 /* [data-list-item-id="guildsnav___home"]>.childWrapper-1j_1ub {
-  background: url("https://cdn.discordapp.com/icons/1015060230222131221/f0204a918c6c9c9a43195997e97d8adf.webp") center/cover;
+    background: url("https://cdn.discordapp.com/icons/1015060230222131221/f0204a918c6c9c9a43195997e97d8adf.webp") center/cover;
 }
 .homeIcon-r0w4ny {
-  display: none;
+    display: none;
 } */
+
+/* Hide New User Badge */
+[class^="newMemberBadge"] {
+    display: none
+}
 
 /* Hide the emoji links */
 a[href^="https://cdn.discordapp.com/emojis/"] {
