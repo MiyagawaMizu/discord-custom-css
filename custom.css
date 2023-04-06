@@ -100,30 +100,10 @@ img.emote {
 }
 
 /* Normal Status Picker */
-.status-3cqfT9[style*="background-color: var(--green-360);"] {
-    background-color: yellow !important;
-}
 
-.status-3cqfT9[style*="background-color: var(--yellow-300);"] {
-    background-color: #75E4B3 !important;
-}
-
-.status-3cqfT9[style*="background-color: var(--red-400);"] {
-    background-color: #E40035 !important;
-}
-
-.status-3cqfT9[style*="background-color: var(--primary-400);"] {
-    background-color: white !important;
-}
-.layer-2BGhQ8 {
-    max-width: 160px
-}
-.submenu-3ycVEH.menu-2TXYjN .description-22_U3B {
-    display: none
-}
 
 /* revert user popout*/
-/* .accountProfilePopoutWrapper-3GskID .bannerSVGWrapper-qc0szY,
+.accountProfilePopoutWrapper-3GskID .bannerSVGWrapper-qc0szY,
 .accountProfilePopoutWrapper-3GskID .avatarWrapper-3y0KZ1,
 .accountProfilePopoutWrapper-3GskID .profileBadges-31rDHI,
 .accountProfilePopoutWrapper-3GskID .userProfileInner-3F03PX:before,
@@ -145,7 +125,7 @@ img.emote {
 .accountProfilePopoutWrapper-3GskID .menu-KSaHL1 .submenu-1apzyU {
     border-radius: 4px;
     width: 220px;
-} */
+}
 
 /* Fix Discord's Embeds for YouTube/Twitch VIdeos */
 .embedVideoImageComponent-3Clc3C {
