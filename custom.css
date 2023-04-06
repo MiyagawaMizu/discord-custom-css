@@ -1,14 +1,53 @@
+
 @import url('https://captain8771.github.io/discordstyles/betterBuiltinEmojis.css');
 /* @import url("https://raw.githubusercontent.com/snappycreeper/OldDiscordFont/main/OldDiscordFont.theme.css"); */
 @import url("https://maendisease.github.io/BetterDiscordStuff/css/bearableInbox.css");
+@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css"); /**
+ * @name RadialStatus
+ * @author Gibbu#1211
+ * @version 2.0.0
+ * @invite ZHthyCw
+ * @description Changes the status icons to wrap around the avatar. Shape can be changed inside the theme file.
+ * @source https://github.com/DiscordStyles/RadialStatus
+ * @website https://www.gibbu.me
+*/
 
-/* discord button */
-/* [data-list-item-id="guildsnav___home"]>.childWrapper-1j_1ub {
-    background: url("https://cdn.discordapp.com/icons/1015060230222131221/f0204a918c6c9c9a43195997e97d8adf.webp") center/cover;
+:root {
+    --rs-small-spacing: 2px;
+    /* Gap between avatar and status for members list/dms | MUST end in px */
+    --rs-medium-spacing: 3px;
+    /* Gap between avatar and status for User popout | MUST end in px */
+    --rs-large-spacing: 4px;
+    /* Gap between avatar and status for User profiles | MUST end in px */
+
+    --rs-small-width: 2px;
+    /* Thickness of status border for members list/dms | MUST end in px */
+    --rs-medium-width: 3px;
+    /* Thickness of status border for User popout | MUST end in px */
+    --rs-large-width: 4px;
+    /* Thickness of status border for User profile | MUST end in px */
+
+    --rs-avatar-shape: 50%;
+    /* 50% for round - 0% for square */
+
+    --rs-online-color: #43b581;
+    /* Colour for online status */
+    --rs-idle-color: #faa61a;
+    /* Colour for idle status */
+    --rs-dnd-color: #f04747;
+    /* Colour for dnd status */
+    --rs-offline-color: #636b75;
+    /* Colour for offline status */
+    --rs-streaming-color: #643da7;
+    /* Colour for streaming status */
+    --rs-invisible-color: #747f8d;
+    /* Colour for invisible status - Note: this will only show for your own invisibility */
+    --rs-phone-color: var(--rs-online-color);
+    /* Colour of the ring and phone icon when a user is on their phone |  */
+
+    --rs-phone-visible: none;
+    /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
 }
-.homeIcon-r0w4ny {
-    display: none;
-} */
 
 /*i'm new here, say hi!*/
 [class*=newMemberBadge]:before {
@@ -98,9 +137,6 @@ img.emote {
     position: relative;
     top: 0.25ex;
 }
-
-/* Normal Status Picker */
-
 
 /* revert user popout*/
 .accountProfilePopoutWrapper-3GskID .bannerSVGWrapper-qc0szY,
