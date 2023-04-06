@@ -11,6 +11,11 @@
     scale: 0.32;
 }
 
+/* Show full bio in the user popout instead of cutting it off after 6 lines */
+[class|=userPopoutInner] [style*="-webkit-line-clamp"] {
+    -webkit-line-clamp: unset !important;
+}
+
 /* Hide the emoji links */
 a[href^="https://cdn.discordapp.com/emojis/"] {
     display: none;
@@ -78,11 +83,6 @@ a[href^="https://cdn.discordapp.com/emojis/"] {
     filter: none;
 }
 
-/* Colorize Spoiler */
-/* #app-mount .spoilerText-2G40u0.hidden-2lQZ5q {
-    background-color: #ecdcd4;
-} */
-
 /* Emote Fix */
 img.emote {
     text-indent: 0;
@@ -93,7 +93,7 @@ img.emote {
 }
 
 /* revert user popout*/
-.accountProfilePopoutWrapper-3GskID .bannerSVGWrapper-qc0szY,
+/* .accountProfilePopoutWrapper-3GskID .bannerSVGWrapper-qc0szY,
 .accountProfilePopoutWrapper-3GskID .avatarWrapper-3y0KZ1,
 .accountProfilePopoutWrapper-3GskID .profileBadges-31rDHI,
 .accountProfilePopoutWrapper-3GskID .userProfileInner-3F03PX:before,
@@ -115,7 +115,7 @@ img.emote {
 .accountProfilePopoutWrapper-3GskID .menu-KSaHL1 .submenu-1apzyU {
     border-radius: 4px;
     width: 220px;
-}
+} */
 
 /* Fix Discord's Embeds for YouTube/Twitch VIdeos */
 .embedVideoImageComponent-3Clc3C {
