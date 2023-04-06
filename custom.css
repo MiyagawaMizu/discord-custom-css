@@ -123,7 +123,7 @@ img.emote {
 }
 
 /* revert user popout*/
-.accountProfilePopoutWrapper-3GskID .bannerSVGWrapper-qc0szY,
+/* .accountProfilePopoutWrapper-3GskID .bannerSVGWrapper-qc0szY,
 .accountProfilePopoutWrapper-3GskID .avatarWrapper-3y0KZ1,
 .accountProfilePopoutWrapper-3GskID .profileBadges-31rDHI,
 .accountProfilePopoutWrapper-3GskID .userProfileInner-3F03PX:before,
@@ -145,7 +145,7 @@ img.emote {
 .accountProfilePopoutWrapper-3GskID .menu-KSaHL1 .submenu-1apzyU {
     border-radius: 4px;
     width: 220px;
-}
+} */
 
 /* Fix Discord's Embeds for YouTube/Twitch VIdeos */
 .embedVideoImageComponent-3Clc3C {
