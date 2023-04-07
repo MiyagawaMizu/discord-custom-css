@@ -93,14 +93,32 @@ img.emote {
 }
 
 /* revert user popout*/
-.accountProfilePopoutWrapper-3GskID .userText-148fun,
-.usernameSection-2d814A:not(.overlayBackground-1KgwVi .usernameSection-2d814A),
-.accountProfilePopoutWrapper-3GskID .divider-1tWBgZ,
-.accountProfilePopoutWrapper-3GskID .section-3FmfOT:first-child,
-.accountProfilePopoutWrapper-3GskID .section-3FmfOT:nth-child(2),
-.accountProfilePopoutWrapper-3GskID .section-3FmfOT:nth-child(4),
-.accountProfilePopoutWrapper-3GskID .section-3FmfOT:last-child {
+.accountProfilePopoutWrapper-3GskID {
+    left: unset;
+}
+
+.accountProfilePopoutWrapper-3GskID .userPopoutOuter-3AVBmJ {
+    width: 220px;
+}
+
+.accountProfilePopoutWrapper-3GskID .userPopoutOverlayBackground-dKOOda {
+    margin: 0;
+}
+
+.accountProfilePopoutWrapper-3GskID .userPopoutInner-1hXSeY> :not(.overlayBackground-1KgwVi),
+.accountProfilePopoutWrapper-3GskID .overlayBackground-1KgwVi> :not(#account),
+.accountProfilePopoutWrapper-3GskID #account>div>div>#account-divider-1 {
     display: none;
+}
+
+
+.accountProfilePopoutWrapper-3GskID .userPopoutOuter-3AVBmJ,
+.accountProfilePopoutWrapper-3GskID .userPopoutInner-1hXSeY {
+    background: none;
+}
+
+.panels-3wFtMD .wrapper-3Hk9OB .container-1zzFcN>.connection-3k9QeF>.inner-llGtyq {
+    min-width: 48px;
 }
 
 /* Fix Discord's Embeds for YouTube/Twitch VIdeos */
