@@ -294,7 +294,7 @@ img.emote {
  */
 #vc-spotify-player {
     --spotify-wave-width: 240px;
-    --spotify-vencord-color: #EBCB8B;
+    --spotify-vencord-color: #1fdf64;
     --spotify-vencord-text: var(--background-primary);
 }
 
