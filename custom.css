@@ -289,6 +289,17 @@ img.emote {
     padding: var(--channel-spacing);
 }
 
+/* Replace Tada Icon when the Server Has Unlocked All Boosting Perks with one from Twemoji. */
+.tadaIcon-313rPm {
+    color: transparent;
+    background-image: url("https://abs.twimg.com/emoji/v2/svg/1f389.svg");
+    height: 16px;
+    width: 16px;
+    position: relative;
+    bottom: 8px;
+    left: 200px;
+}
+
 /* Comfy-Style Spotify Player
  * Kanged and modified code from https://github.com/Comfy-Themes/Discord
  */
