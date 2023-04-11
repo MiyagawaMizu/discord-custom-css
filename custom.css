@@ -1,6 +1,3 @@
-
-@import url('https://captain8771.github.io/discordstyles/betterBuiltinEmojis.css');
-/* @import url("https://raw.githubusercontent.com/snappycreeper/OldDiscordFont/main/OldDiscordFont.theme.css"); */
 @import url("https://maendisease.github.io/BetterDiscordStuff/css/bearableInbox.css");
 
 /*i'm new here, say hi!*/
@@ -381,4 +378,22 @@ img.emote {
 
 .vc-spotify-button.vc-spotify-button:hover {
     background: hsl(var(--primary-700-hsl)/0.3);
+}
+
+/* simplify right click */
+#message-tts,
+#message-add-reaction-1,
+#message-mark-unread,
+.wrapper--nA0oy {
+    display: none;
+}
+
+/* Fake animated Avatar */
+[src^="https://cdn.discordapp.com/avatars/738748102311280681/"],
+[src^="https://cdn.discordapp.com/avatars/1075112391152513064/"] {
+    content: url(https://media.discordapp.net/attachments/953841823338618900/1087471163820740709/a_7f6e1adfd31bf02360c07181907f2ea2.gif?width=682&height=682);
+}
+
+[src^="https://cdn.discordapp.com/avatars/749643819628232744/"] {
+    content: url(https://cdn.discordapp.com/attachments/953841823338618900/1095271588066238584/tumblr_f09aeff1084ea6221deb3f5c11e36948_4069c0ab_540.gif);
 }
