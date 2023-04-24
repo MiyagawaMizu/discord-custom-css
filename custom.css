@@ -8,55 +8,45 @@
     scale: 0.32;
 }
 
-/* Show full bio in the user popout instead of cutting it off after 6 lines */
-[class|=userPopoutInner] [style*="-webkit-line-clamp"] {
-    -webkit-line-clamp: unset !important;
+/* Reduced enhanced markdown margins */
+[class^=message] [id^=message-content] :is(h1, h2, h3, li) {
+    margin: 0px;
+}
+
+[class^=message] [id^=message-content] :is(ol, ul) {
+    margin-top: 0px;
+}
+
+/* Remove Notes in User Popout */
+.section-28YDOf:has(.note-1NN2aP) {
+    display: none;
+    padding-bottom: 23px;
+}
+
+[class*=memberSinceContainer-] {
+    margin-bottom: 14px;
+}
+
+/* compact embeds */
+[id^=message-accessories] [class^=gridContainer]>[class^=grid] {
+    padding: 8px;
+}
+
+[id^=message-accessories] [class^=gridContainer]>[class^=grid]>* {
+    margin-top: 2px;
+}
+
+[id^=message-accessories] [class^=gridContainer]>[class^=grid] [class^=message] {
+    margin-bottom: 4px;
+}
+
+[id^=message-accessories] [class^=gridContainer]>[class^=grid] [class^=message] h3[class*=header] {
+    margin-top: 0px;
 }
 
 /* Hide the emoji links */
 a[href^="https://cdn.discordapp.com/emojis/"] {
     display: none;
-}
-
-/*Remove Invite Button next to channel name*/
-.actionIcon-2sw4Sl {
-    display: none;
-}
-
-/* Fix Small Image Group Previews (>=32px) */
-.lazyImg-ewiNCh,
-.originalLink-Azwuo9 {
-    min-width: auto !important;
-}
-
-.mediaAttachmentsContainer-1WGRWy>div {
-    width: fit-content;
-}
-
-.oneByTwoSoloItem-MZsImq {
-    flex: 0.5;
-}
-
-.twoByOneGrid-3RBEQO {
-    flex-direction: row;
-}
-
-.oneByTwoGrid-25mx0i {
-    align-items: flex-start;
-}
-
-.lazyImgContainer-3k3gRy,
-.mediaAttachmentsContainer-1WGRWy {
-    border-radius: 0 !important;
-}
-
-.hoverButtonGroup-2yZIzC {
-    top: 0;
-    right: 0;
-}
-
-.hoverButton-36QWJk {
-    border-radius: 5px;
 }
 
 /* Hide GIFT button */
@@ -74,8 +64,7 @@ a[href^="https://cdn.discordapp.com/emojis/"] {
     display: none;
 }
 
-
-/* Colorize ICon */
+/* Colorize Icon */
 .emojiItemDisabled-3VVnwp {
     filter: none;
 }
@@ -90,7 +79,7 @@ img.emote {
 }
 
 /* revert user popout*/
-.accountProfilePopoutWrapper-3GskID {
+/* .accountProfilePopoutWrapper-3GskID {
     left: unset;
 }
 
@@ -116,7 +105,7 @@ img.emote {
 
 .panels-3wFtMD .wrapper-3Hk9OB .container-1zzFcN>.connection-3k9QeF>.inner-llGtyq {
     min-width: 48px;
-}
+} */
 
 /* Fix Discord's Embeds for YouTube/Twitch VIdeos */
 .embedVideoImageComponent-3Clc3C {
@@ -166,38 +155,6 @@ img.emote {
 .embedFooterText-28V_Wb>.wrapper-3WhCwL>.channelIcon-1MN1lz {
     width: calc(1.05rem * 1.05 / 1.3);
     height: 1.05rem;
-}
-
-
-/* Replaces the long discord message links with "Jump to Message" in chat */
-[title^="https://discord.com/channels/"],
-[title^="https://ptb.discord.com/channels/"],
-[title^="https://canary.discord.com/channels/"] {
-    line-height: 0;
-    font-size: 0;
-    text-decoration-color: #fff !important;
-}
-
-[title^="https://discord.com/channels/"]::before,
-[title^="https://ptb.discord.com/channels/"]::before,
-[title^="https://canary.discord.com/channels/"]::before {
-    content: "✉ Jump to Message";
-    font-size: 16px;
-    user-select: text;
-    font-weight: 500;
-    transition: background-color 50ms ease-out, color 50ms ease-out;
-    cursor: pointer;
-    border-radius: 3px;
-    padding: 0 2px;
-    background: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.3);
-    color: hsl(236, calc(var(--saturation-factor, 1) * 83.3%), 92.9%);
-}
-
-[title^="https://discord.com/channels/"]:hover::before,
-[title^="https://ptb.discord.com/channels/"]:hover::before,
-[title^="https://canary.discord.com/channels/"]:hover::before {
-    background-color: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);
-    color: #fff;
 }
 
 /* Compact Blocked Messages */
@@ -297,18 +254,59 @@ img.emote {
     left: 200px;
 }
 
+/* simplify right click */
+#message-tts,
+#message-add-reaction-1,
+#message-mark-unread,
+.wrapper--nA0oy {
+    display: none;
+}
+
+/* Local Avatar */
+/* [src^="https://cdn.discordapp.com/avatars/738748102311280681/"] {
+  content: url(https://media.discordapp.net/attachments/953841823338618900/1087471163820740709/a_7f6e1adfd31bf02360c07181907f2ea2.gif);
+} */
+/* Local Avatar For Beast */
+[src^="https://cdn.discordapp.com/avatars/141555126337798144/"] {
+    content: url(https://avatars.githubusercontent.com/u/40509985);
+}
+
+/* Change Clyde Avatar */
+[src*="/assets/cb1043c312ec65507573c06c37f6ee63.gif"],
+[src*="/assets/6024f311af925206143919b880e34a30.png"] {
+    content: url(https://cdn.discordapp.com/attachments/979430971659128932/1098500064621625425/avatar_discord.gif) !important;
+}
+
+[src^="/assets/3e30cd914362f27e07b3b4634c7600be.png"] {
+    content: url(https://cdn.discordapp.com/attachments/953841823338618900/1098517219014611005/banner_discord.gif);
+}
+
+[src*="/assets/3e30cd914362f27e07b3b4634c7600be.png"] {
+    content: url(https://cdn.discordapp.com/attachments/953841823338618900/1098517219014611005/banner_discord.gif);
+}
+
+:is([class*=contents-], [class*=memberInner]):has([src*="1081004946872352958"]) [class*=username] {
+    color: rgb(235, 148, 249) !important;
+}
+
+:is([class*=contents-]):has([src*="1081004946872352958"]) [class*=username] {
+    content: "Mihari" !important;
+}
+
+/* Comfy Code, kanged from Comfy but modified by AkiraSimplex#5199(1038809506899042445)/
 /* Comfy-Style Spotify Player
  * Kanged and modified code from https://github.com/Comfy-Themes/Discord
  */
-#vc-spotify-player {
-    --spotify-wave-width: 240px;
-    --spotify-vencord-color: #1fdf64;
-    --spotify-vencord-text: var(--background-primary);
+:root {
+    --spotify-vencord-wave-width: 240px;
+    --spotify-vencord-color: var(--spotify);
+    /* Use HSL Values for the next one */
+    --spotify-vencord-text: var(--primary-600-hsl);
 }
 
 @keyframes spotifywave {
     0% {
-        -webkit-mask-position-x: var(--spotify-wave-width);
+        -webkit-mask-position-x: var(--spotify-vencord-wave-width);
     }
 
     100% {
@@ -316,12 +314,16 @@ img.emote {
     }
 }
 
+#vc-spotify-player {
+    /* The code below isn't really needed but it looks pretty :3 */
+}
+
 #vc-spotify-player::before {
     content: "";
     position: absolute;
     height: 25px;
     z-index: 1;
-    width: var(--spotify-wave-width);
+    width: var(--spotify-vencord-wave-width);
     margin-top: -29px;
     left: 0;
     background: var(--spotify-vencord-color);
@@ -332,26 +334,58 @@ img.emote {
 }
 
 #vc-spotify-player#vc-spotify-player {
-    background: linear-gradient(var(--spotify-vencord-color) 20%, var(--bg-overlay-1, var(--background-secondary-alt)));
+    background: var(--spotify-vencord-color);
     border-bottom: none;
 }
 
-#vc-spotify-song-title#vc-spotify-song-title,
-.vc-spotify-ellipoverflow.vc-spotify-ellipoverflow,
-.vc-spotify-artist.vc-spotify-artist,
-.vc-spotify-album.vc-spotify-album
-
-/* , .vc-spotify-time-right, .vc-spotify-time-left */
-    {
-    color: var(--spotify-vencord-text);
+#vc-spotify-player #vc-spotify-song-title#vc-spotify-song-title,
+#vc-spotify-player .vc-spotify-ellipoverflow.vc-spotify-ellipoverflow,
+#vc-spotify-player .vc-spotify-artist.vc-spotify-artist,
+#vc-spotify-player .vc-spotify-album.vc-spotify-album,
+#vc-spotify-player .vc-spotify-time-right,
+#vc-spotify-player .vc-spotify-time-left {
+    color: hsla(var(--spotify-vencord-text)/1);
 }
 
-#vc-spotify-player [class*="bar-"] {
-    background: hsl(var(--primary-700-hsl)/0.3);
+#vc-spotify-player#vc-spotify-player [class*=bar-] {
+    background: hsla(var(--spotify-vencord-text)/0.3);
 }
 
-#vc-spotify-player [class*="barFill"] {
-    background: var(--spotify-vencord-color);
+#vc-spotify-player#vc-spotify-player [class*=barFill] {
+    background: hsla(var(--spotify-vencord-text)/0.7);
+}
+
+#vc-spotify-player #vc-spotify-progress-bar>[class^=slider] [class^=grabber][class^=grabber] {
+    background-color: var(--spotify-vencord-color);
+    border-color: var(--background-primary);
+    color: var(--interactive-normal);
+    border-width: 2px;
+    height: 8px !important;
+    width: 8px !important;
+}
+
+#vc-spotify-player .vc-spotify-shuffle-on.vc-spotify-shuffle-on,
+#vc-spotify-player .vc-spotify-repeat-context.vc-spotify-repeat-context,
+#vc-spotify-player .vc-spotify-repeat-track.vc-spotify-repeat-track,
+#vc-spotify-player .vc-spotify-shuffle-on.vc-spotify-shuffle-on:hover,
+#vc-spotify-player .vc-spotify-repeat-context.vc-spotify-repeat-context:hover,
+#vc-spotify-player .vc-spotify-repeat-track.vc-spotify-repeat-track:hover {
+    color: hsla(var(--spotify-vencord-text)/1);
+}
+
+#vc-spotify-player .vc-spotify-repeat-off.vc-spotify-repeat-off.vc-spotify-repeat-off,
+#vc-spotify-player .vc-spotify-shuffle-off.vc-spotify-shuffle-off.vc-spotify-shuffle-off {
+    color: hsla(var(--spotify-vencord-text)/0.5);
+}
+
+#vc-spotify-player .vc-spotify-button.vc-spotify-button {
+    transition: background 0.1s;
+    color: hsla(var(--spotify-vencord-text)/1);
+}
+
+#vc-spotify-player .vc-spotify-button.vc-spotify-button:hover {
+    background: hsla(var(--spotify-vencord-text)/0.3);
+    color: hsla(var(--spotify-vencord-text)/1);
 }
 
 [class*=wrapper-]:not(:empty)+#vc-spotify-player {
@@ -362,38 +396,74 @@ img.emote {
     border-bottom: none;
 }
 
-/* The code below isn't really needed but it looks pretty :3 */
-.vc-spotify-shuffle-on.vc-spotify-shuffle-on,
-.vc-spotify-repeat-context.vc-spotify-repeat-context,
-.vc-spotify-repeat-track.vc-spotify-repeat-track,
-.vc-spotify-shuffle-on.vc-spotify-shuffle-on:hover,
-.vc-spotify-repeat-context.vc-spotify-repeat-context:hover,
-.vc-spotify-repeat-track.vc-spotify-repeat-track:hover {
-    color: var(--spotify-vencord-color);
+#vc-spotify-player+[class*=container-] {
+    background: var(--spotify-vencord-color);
 }
 
-.vc-spotify-button.vc-spotify-button {
-    transition: background 0.3s;
+#vc-spotify-player+[class*=container-] [class*=button-][class*=button-][class*=button-],
+#vc-spotify-player+[class*=container-] [class*=title-][class*=title-][class*=title-] {
+    color: hsla(var(--spotify-vencord-text)/1);
 }
 
-.vc-spotify-button.vc-spotify-button:hover {
-    background: hsl(var(--primary-700-hsl)/0.3);
+#vc-spotify-player+[class*=container-] [class*=subtext-] {
+    color: hsla(var(--spotify-vencord-text)/0.7) !important;
 }
 
-/* simplify right click */
-#message-tts,
-#message-add-reaction-1,
-#message-mark-unread,
-.wrapper--nA0oy {
-    display: none;
+#vc-spotify-player+[class*=container-] [class*=withTagAsButton-]:hover,
+#vc-spotify-player+[class*=container-] [class*=withTagless]:hover,
+#vc-spotify-player+[class*=container-] [class*=button-][class*=enabled-]:hover {
+    background-color: hsla(var(--spotify-vencord-text)/0.2);
 }
 
-/* Fake animated Avatar */
-[src^="https://cdn.discordapp.com/avatars/738748102311280681/"],
-[src^="https://cdn.discordapp.com/avatars/1075112391152513064/"] {
-    content: url(https://media.discordapp.net/attachments/953841823338618900/1087471163820740709/a_7f6e1adfd31bf02360c07181907f2ea2.gif?width=682&height=682);
+#vc-spotify-player+[class*=container-] rect[fill="#f23f43"],
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-dnd)"]>div {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+    background-color: hsla(var(--spotify-vencord-text)/1) !important;
 }
 
-[src^="https://cdn.discordapp.com/avatars/749643819628232744/"] {
-    content: url(https://cdn.discordapp.com/attachments/953841823338618900/1095271588066238584/tumblr_f09aeff1084ea6221deb3f5c11e36948_4069c0ab_540.gif);
+#vc-spotify-player+[class*=container-] rect[fill="rgba(242, 63, 67, 1)"] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="#23a55a"],
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-online)"]>div,
+#vc-spotify-player+[class*=container-] div[class^=dotOnline],
+#vc-spotify-player+[class*=container-] i[class^=statusOnline-] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+    background-color: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="rgba(35, 165, 90, 1)"] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="#f0b232"],
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-idle)"]>div {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+    background-color: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="rgba(240, 178, 50, 1)"] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="#82858f"],
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-offline)"]>div,
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-offline)"]>rect,
+#vc-spotify-player+[class*=container-] div[class^=dotOffline],
+#vc-spotify-player+[class*=container-] i[class^=statusOffline-] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+    background-color: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="rgba(130, 133, 143, 1)"] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+[class*=panels-] [class*=activityPanel-] {
+    border-bottom: none;
+}
+
+[class*=listeningAlong-] {
+    padding-bottom: 24px !important;
 }
