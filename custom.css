@@ -8,6 +8,13 @@
     scale: 0.32;
 }
 
+/* Fix platform indicator size */
+.headerText-2z4IhQ>div>svg {
+    height: 16px;
+    width: 16px;
+    overflow-y: hidden;
+}
+
 /* Reduced enhanced markdown margins */
 [class^=message] [id^=message-content] :is(h1, h2, h3, li) {
     margin: 0px;
@@ -65,9 +72,9 @@ a[href^="https://cdn.discordapp.com/emojis/"] {
 }
 
 /* Colorize Icon */
-.emojiItemDisabled-3VVnwp {
+/* .emojiItemDisabled-3VVnwp {
     filter: none;
-}
+} */
 
 /* Emote Fix */
 img.emote {
