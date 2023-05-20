@@ -1,0 +1,447 @@
+@import url("https://maendisease.github.io/BetterDiscordStuff/css/bearableInbox.css");
+
+/*i'm new here, say hi!*/
+[class*=newMemberBadge]:before {
+    content: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=64&quality=lossless);
+    transform: translate(-100%, -110%);
+    display: inline-block;
+    scale: 0.32;
+}
+
+/* Fix platform indicator size */
+.headerText-2z4IhQ>div>svg {
+    height: 16px;
+    width: 16px;
+    overflow-y: hidden;
+}
+
+/* Reduced enhanced markdown margins */
+[class^=message] [id^=message-content] :is(h1, h2, h3, li) {
+    margin: 0px;
+}
+
+[class^=message] [id^=message-content] :is(ol, ul) {
+    margin-top: 0px;
+}
+
+/* Remove Notes in User Popout */
+.section-28YDOf:has(.note-1NN2aP) {
+    display: none;
+    padding-bottom: 23px;
+}
+
+[class*=memberSinceContainer-] {
+    margin-bottom: 14px;
+}
+
+/* compact embeds */
+[id^=message-accessories] [class^=gridContainer]>[class^=grid] {
+    padding: 8px;
+}
+
+[id^=message-accessories] [class^=gridContainer]>[class^=grid]>* {
+    margin-top: 2px;
+}
+
+[id^=message-accessories] [class^=gridContainer]>[class^=grid] [class^=message] {
+    margin-bottom: 4px;
+}
+
+[id^=message-accessories] [class^=gridContainer]>[class^=grid] [class^=message] h3[class*=header] {
+    margin-top: 0px;
+}
+
+/* Hide the emoji links */
+a[href^="https://cdn.discordapp.com/emojis/"] {
+    display: none;
+}
+
+/* Hide GIFT button */
+.buttons-uaqb-5>.button-ejjZWC {
+    display: none
+}
+
+/* Hide GIF button */
+/* .buttonContainer-2lnNiN:not(.apateE2EButton):not(.send-button)> :not(.emojiButton-3FRTuj):not(.fm-button)> :not(.stickerButton-1-nFh2):not(.apateEncryptionKeyContainer):not(.translateButton-DhP9x8) {
+    display: none;
+} */
+
+/* Hide Stickers button */
+.stickerButton-1-nFh2 {
+    display: none;
+}
+
+/* Colorize Icon */
+/* .emojiItemDisabled-3VVnwp {
+    filter: none;
+} */
+
+/* Emote Fix */
+img.emote {
+    text-indent: 0;
+    white-space: nowrap;
+    width: auto;
+    position: relative;
+    top: 0.25ex;
+}
+
+/* Fix Discord's Embeds for YouTube/Twitch VIdeos */
+.embedVideoImageComponent-3Clc3C {
+    justify-content: unset;
+    align-items: unset;
+}
+
+/* Username Background(Fixes New Badge Issue) */
+/* .headerText-2z4IhQ>[role*="button"]:not(.username-h_Y3Us)::before {
+    content: '';
+    width: calc(18px + 7px);
+    background-color: currentColor;
+    opacity: 0.3;
+    margin-left: 2px;
+} */
+
+/* Username Background */
+/* .headerText-2z4IhQ>span::before {
+    content: '';
+    width: calc(100% + 7px);
+    height: 100%;
+    border-radius: 5px;
+    background-color: currentColor;
+    opacity: 0.3;
+    position: absolute;
+    margin-top: 0px;
+    z-index: -1;
+    margin-left: -3px;
+}
+
+.headerText-2z4IhQ>span {
+    margin-left: 3px;
+} */
+
+/* repairs left shift */
+.cozy-3raOZG .headerText-3Uvj1Y>.username-1A8OIy {
+    margin-left: 3px;
+}
+
+/* fix the file icon shrinking with long file names */
+.audioMetadata-3zOuGv::before {
+    min-width: 24px;
+}
+
+/* Fix the channel icon being oversized in embeds and channel topics */
+.topic-TCb_qw>.wrapper-3WhCwL>.channelIcon-1MN1lz,
+.embedFooterText-28V_Wb>.wrapper-3WhCwL>.channelIcon-1MN1lz {
+    width: calc(1.05rem * 1.05 / 1.3);
+    height: 1.05rem;
+}
+
+/* Compact Blocked Messages */
+.scrollerInner-2PPAp2>.groupStart-3Mlgv1:not(.backgroundFlash-1X5jVs)>.wrapper-30-Nkg {
+    padding: 0 0 0 16px
+}
+
+.scrollerInner-2PPAp2>.groupStart-3Mlgv1:not(.backgroundFlash-1X5jVs)>.wrapper-30-Nkg.compact-2Nkcau {
+    padding: 0 0 0 108px
+}
+
+.scrollerInner-2PPAp2>.groupStart-3Mlgv1:not(.backgroundFlash-1X5jVs) {
+    margin: 0
+}
+
+.scrollerInner-2PPAp2>.groupStart-3Mlgv1.expanded-3lghlw:not(.backgroundFlash-1X5jVs) {
+    background-color: var(--info-danger-background)
+}
+
+.scrollerInner-2PPAp2>.groupStart-3Mlgv1:not(.backgroundFlash-1X5jVs) .messageListItem-ZZ7v6g .groupStart-3Mlgv1,
+.scrollerInner-2PPAp2>.groupStart-3Mlgv1:not(.backgroundFlash-1X5jVs, .expanded-3lghlw)+.messageListItem-ZZ7v6g .groupStart-3Mlgv1 {
+    margin-top: 0
+}
+
+.scrollerInner-2PPAp2>.groupStart-3Mlgv1:not(.backgroundFlash-1X5jVs) .messageListItem-ZZ7v6g {
+    opacity: .5
+}
+
+.blockedSystemMessage-3FmE9n .iconContainer-2rPbqG {
+    display: none
+}
+
+.blockedMessageText-3Zeg3y {
+    position: relative;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--interactive-muted)
+}
+
+.blockedMessageText-3Zeg3y:hover {
+    text-decoration: underline
+}
+
+.blockedMessageText-3Zeg3y:hover,
+.groupStart-3Mlgv1.expanded-3lghlw .blockedMessageText-3Zeg3y {
+    color: var(--info-danger-foreground)
+}
+
+.blockedAction-2cPk2G {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0
+}
+
+.blockedMessageText-3Zeg3y:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 14px;
+    pointer-events: none;
+    background-color: currentColor;
+    -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 3.999V2H9V3.999H3V5.999H21V3.999H15Z M5 6.99902V18.999C5 20.101 5.897 20.999 7 20.999H17C18.103 20.999 19 20.101 19 18.999V6.99902H5ZM11 17H9V11H11V17ZM15 17H13V11H15V17Z" ></path></svg>') center/contain no-repeat
+}
+
+.container-1NXEtd .content-2a4AW9>div[style="height: 16px;"]:nth-child(2) {
+    display: none;
+}
+
+/* Compact channels catégories */
+
+:root {
+    --category-spacing: 2px;
+    --channel-spacing: 4px;
+}
+
+.containerDefault-3TQ5YN,
+.containerDragAfter-1J_-1V,
+.containerDragBefore-ei4h1m,
+.containerUserOver-3woq86 {
+    padding-top: var(--category-spacing);
+}
+
+.mainContent-20q_Hp {
+    padding: var(--channel-spacing);
+}
+
+/* Replace Tada Icon when the Server Has Unlocked All Boosting Perks with one from Twemoji. */
+.tadaIcon-313rPm {
+    color: transparent;
+    background-image: url("https://abs.twimg.com/emoji/v2/svg/1f389.svg");
+    height: 16px;
+    width: 16px;
+    position: relative;
+    bottom: 8px;
+    left: 200px;
+}
+
+/* simplify right click */
+#message-tts,
+#message-add-reaction-1,
+#message-mark-unread,
+.wrapper--nA0oy {
+    display: none;
+}
+
+/* Local Avatar */
+/* [src^="https://cdn.discordapp.com/avatars/738748102311280681/"] {
+  content: url(https://media.discordapp.net/attachments/953841823338618900/1087471163820740709/a_7f6e1adfd31bf02360c07181907f2ea2.gif);
+} */
+/* Local Avatar For Beast */
+[src^="https://cdn.discordapp.com/avatars/141555126337798144/"] {
+    content: url(https://avatars.githubusercontent.com/u/40509985);
+}
+
+/* Change Clyde Avatar */
+[src*="/assets/cb1043c312ec65507573c06c37f6ee63.gif"],
+[src*="/assets/6024f311af925206143919b880e34a30.png"] {
+    content: url(https://cdn.discordapp.com/attachments/979430971659128932/1098500064621625425/avatar_discord.gif) !important;
+}
+
+[src^="/assets/3e30cd914362f27e07b3b4634c7600be.png"] {
+    content: url(https://cdn.discordapp.com/attachments/953841823338618900/1098517219014611005/banner_discord.gif);
+}
+
+[src*="/assets/3e30cd914362f27e07b3b4634c7600be.png"] {
+    content: url(https://cdn.discordapp.com/attachments/953841823338618900/1098517219014611005/banner_discord.gif);
+}
+
+:is([class*=contents-], [class*=memberInner]):has([src*="1081004946872352958"]) [class*=username] {
+    color: rgb(235, 148, 249) !important;
+}
+
+:is([class*=contents-]):has([src*="1081004946872352958"]) [class*=username] {
+    content: "Mihari" !important;
+}
+
+/* Comfy Code, kanged from Comfy but modified by AkiraSimplex#5199(1038809506899042445)/
+/* Comfy-Style Spotify Player
+ * Kanged and modified code from https://github.com/Comfy-Themes/Discord
+ */
+:root {
+    --spotify-vencord-wave-width: 240px;
+    --spotify-vencord-color: var(--spotify);
+    /* Use HSL Values for the next one */
+    --spotify-vencord-text: var(--primary-600-hsl);
+}
+
+@keyframes spotifywave {
+    0% {
+        -webkit-mask-position-x: var(--spotify-vencord-wave-width);
+    }
+
+    100% {
+        -webkit-mask-position-x: 0;
+    }
+}
+
+#vc-spotify-player {
+    /* The code below isn't really needed but it looks pretty :3 */
+}
+
+#vc-spotify-player::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    z-index: 1;
+    width: var(--spotify-vencord-wave-width);
+    margin-top: -29px;
+    left: 0;
+    background: var(--spotify-vencord-color);
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="25" viewBox="0 0 284 25"><path d="M283.999 15.2776C228.798 15.2776 211.243 -0.0317305 140.048 -0.000164877C69.0475 -0.000164877 51.2975 15.2776 8.58307e-06 15.2776V24.9998H284C284 24.9998 283.999 18.9392 283.999 15.2776Z"/></svg>');
+    animation: spotifywave 8s linear infinite;
+    animation-delay: 0s;
+    opacity: 1;
+}
+
+#vc-spotify-player#vc-spotify-player {
+    background: var(--spotify-vencord-color);
+    border-bottom: none;
+}
+
+#vc-spotify-player #vc-spotify-song-title#vc-spotify-song-title,
+#vc-spotify-player .vc-spotify-ellipoverflow.vc-spotify-ellipoverflow,
+#vc-spotify-player .vc-spotify-artist.vc-spotify-artist,
+#vc-spotify-player .vc-spotify-album.vc-spotify-album,
+#vc-spotify-player .vc-spotify-time-right,
+#vc-spotify-player .vc-spotify-time-left {
+    color: hsla(var(--spotify-vencord-text)/1);
+}
+
+#vc-spotify-player#vc-spotify-player [class*=bar-] {
+    background: hsla(var(--spotify-vencord-text)/0.3);
+}
+
+#vc-spotify-player#vc-spotify-player [class*=barFill] {
+    background: hsla(var(--spotify-vencord-text)/0.7);
+}
+
+#vc-spotify-player #vc-spotify-progress-bar>[class^=slider] [class^=grabber][class^=grabber] {
+    background-color: var(--spotify-vencord-color);
+    border-color: var(--background-primary);
+    color: var(--interactive-normal);
+    border-width: 2px;
+    height: 8px !important;
+    width: 8px !important;
+}
+
+#vc-spotify-player .vc-spotify-shuffle-on.vc-spotify-shuffle-on,
+#vc-spotify-player .vc-spotify-repeat-context.vc-spotify-repeat-context,
+#vc-spotify-player .vc-spotify-repeat-track.vc-spotify-repeat-track,
+#vc-spotify-player .vc-spotify-shuffle-on.vc-spotify-shuffle-on:hover,
+#vc-spotify-player .vc-spotify-repeat-context.vc-spotify-repeat-context:hover,
+#vc-spotify-player .vc-spotify-repeat-track.vc-spotify-repeat-track:hover {
+    color: hsla(var(--spotify-vencord-text)/1);
+}
+
+#vc-spotify-player .vc-spotify-repeat-off.vc-spotify-repeat-off.vc-spotify-repeat-off,
+#vc-spotify-player .vc-spotify-shuffle-off.vc-spotify-shuffle-off.vc-spotify-shuffle-off {
+    color: hsla(var(--spotify-vencord-text)/0.5);
+}
+
+#vc-spotify-player .vc-spotify-button.vc-spotify-button {
+    transition: background 0.1s;
+    color: hsla(var(--spotify-vencord-text)/1);
+}
+
+#vc-spotify-player .vc-spotify-button.vc-spotify-button:hover {
+    background: hsla(var(--spotify-vencord-text)/0.3);
+    color: hsla(var(--spotify-vencord-text)/1);
+}
+
+[class*=wrapper-]:not(:empty)+#vc-spotify-player {
+    margin-top: 27px;
+}
+
+[class*=panels-] [class*=wrapper-] [class*=container-] {
+    border-bottom: none;
+}
+
+#vc-spotify-player+[class*=container-] {
+    background: var(--spotify-vencord-color);
+}
+
+#vc-spotify-player+[class*=container-] [class*=button-][class*=button-][class*=button-],
+#vc-spotify-player+[class*=container-] [class*=title-][class*=title-][class*=title-] {
+    color: hsla(var(--spotify-vencord-text)/1);
+}
+
+#vc-spotify-player+[class*=container-] [class*=subtext-] {
+    color: hsla(var(--spotify-vencord-text)/0.7) !important;
+}
+
+#vc-spotify-player+[class*=container-] [class*=withTagAsButton-]:hover,
+#vc-spotify-player+[class*=container-] [class*=withTagless]:hover,
+#vc-spotify-player+[class*=container-] [class*=button-][class*=enabled-]:hover {
+    background-color: hsla(var(--spotify-vencord-text)/0.2);
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="#f23f43"],
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-dnd)"]>div {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+    background-color: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="rgba(242, 63, 67, 1)"] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="#23a55a"],
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-online)"]>div,
+#vc-spotify-player+[class*=container-] div[class^=dotOnline],
+#vc-spotify-player+[class*=container-] i[class^=statusOnline-] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+    background-color: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="rgba(35, 165, 90, 1)"] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="#f0b232"],
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-idle)"]>div {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+    background-color: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="rgba(240, 178, 50, 1)"] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="#82858f"],
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-offline)"]>div,
+#vc-spotify-player+[class*=container-] foreignObject[mask="url(#svg-mask-status-offline)"]>rect,
+#vc-spotify-player+[class*=container-] div[class^=dotOffline],
+#vc-spotify-player+[class*=container-] i[class^=statusOffline-] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+    background-color: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+#vc-spotify-player+[class*=container-] rect[fill="rgba(130, 133, 143, 1)"] {
+    fill: hsla(var(--spotify-vencord-text)/1) !important;
+}
+
+[class*=panels-] [class*=activityPanel-] {
+    border-bottom: none;
+}
+
+[class*=listeningAlong-] {
+    padding-bottom: 24px !important;
+}
